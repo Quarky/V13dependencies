@@ -11,6 +11,7 @@ on:
       - 'export_modules.py'
       - 'Export-Module-Inventory.command'
       - 'README.md'
+      - 'pinned-manifests/**'
       - '.github/workflows/build-v13-dependencies.yml'
   workflow_dispatch:
 permissions:
@@ -24,6 +25,7 @@ jobs:
         run: |
           python3 -m json.tool module.json >/dev/null
           python3 -m json.tool dependencies-v13.json >/dev/null
+          for file in pinned-manifests/*.json; do python3 -m json.tool "$file" >/dev/null; done
           python3 -m py_compile dependency_manager.py export_modules.py
           bash -n install.sh Install.command Export-Module-Inventory.command
           python3 - <<'PY'
@@ -32,13 +34,27 @@ jobs:
           assert manifest["id"]=="v13dependencies"
           assert manifest["download"].endswith("/V13dependencies/main/v13dependencies.zip")
           assert manifest["compatibility"]["maximum"]=="13"
+          registry=json.load(open("dependencies-v13.json"))
+          automatic={entry["id"]:entry for entry in registry["packages"] if entry.get("installMode")=="manifest"}
+          assert set(automatic)==set(dep["id"] for dep in manifest["relationships"]["requires"])
+          for ident, entry in automatic.items():
+              assert entry["manifest"].startswith("https://")
+              if "/pinned-manifests/" in entry["manifest"]:
+                  p="pinned-manifests/"+ident+".json"
+                  data=json.load(open(p))
+                  assert data["id"]==ident, (ident, data["id"])
+                  assert data["version"]==entry["expectedVersion"],ident
+                  assert str(data["compatibility"].get("minimum","")).split(".")[0]!="14",ident
+                  assert data["download"].startswith("https://"),ident
+                  assert "/latest/" not in data["download"],ident
+          assert not any(x["id"] in automatic for x in registry["packages"] if x.get("installMode")!="manifest")
           PY
       - name: Build installable Foundry V13 module archive
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import zipfile
-          names = ['module.json','dependencies-v13.json','dependency_manager.py','install.sh','Install.command','export_modules.py','Export-Module-Inventory.command','README.md']
+          names = ['module.json','dependencies-v13.json','dependency_manager.py','install.sh','Install.command','export_modules.py','Export-Module-Inventory.command','README.md'] + [str(p) for p in sorted(Path('pinned-manifests').glob('*.json'))]
           with zipfile.ZipFile('v13dependencies.zip','w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
               for name in names:
                   file = Path(name)
