@@ -1,0 +1,50 @@
+{
+  "title": "Isometric Perspective",
+  "id": "isometric-perspective",
+  "description": "Changes the canvas perspective from top-down to isometric. V13 brought by WarpSpeedNyanCat, forked from https://github.com/warpspeednyancatpatreon/isometric-perspective",
+  "version": "0.9.7",
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/welcome.css",
+    "styles/token-tab.css",
+    "styles/tile-tab.css",
+    "styles/scene-tab.css",
+    "styles/ruler.css"
+  ],
+  "authors": [
+    {
+      "name": "ArlosMolten",
+      "email": "arlosmolten@gmail.com"
+    },
+    {
+      "name": "WarpSpeedNyanCat",
+      "email": "warpspeednyancatpatreon@gmail.com"
+    },
+    {
+      "name": "Josh Brodie",
+      "email": "joshbrodienz@gmail.com"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "url": "https://github.com/arlosmolten/isometric-perspective",
+  "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/isometric-perspective.json",
+  "download": "https://github.com/arlosmolten/isometric-perspective/releases/download/v0.9.7/isometric-perspective.zip",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ]
+}
