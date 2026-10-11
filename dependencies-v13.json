@@ -62,6 +62,72 @@
       "foundryMaximum": "14",
       "verifiedFoundry": 14,
       "notes": "Foundry 13-14. System-agnostic; CCM integration."
+    },
+    {
+      "id": "lib-wrapper",
+      "name": "libWrapper",
+      "v14Version": "1.13.5.1",
+      "v13Version": "1.13.4.0",
+      "role": "required-3d-canvas-library",
+      "installMode": "manifest",
+      "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.13.4.0/module.json",
+      "expectedVersion": "1.13.4.0",
+      "foundryMinimum": "0.6.5",
+      "verifiedFoundry": 13,
+      "notes": "Official V13-verified release; direct dependency of 3D Canvas, Levels and Wall Height."
+    },
+    {
+      "id": "socketlib",
+      "name": "socketlib",
+      "v14Version": "1.1.4",
+      "v13Version": "1.1.3",
+      "role": "3d-canvas-companion-library",
+      "installMode": "manifest",
+      "manifest": "https://github.com/farling42/foundryvtt-socketlib/releases/download/v1.1.3/module.json",
+      "expectedVersion": "1.1.3",
+      "foundryMinimum": "11",
+      "verifiedFoundry": 13,
+      "notes": "V13-verified stable library; listed in the 3D Canvas documentation's prerequisite stack."
+    },
+    {
+      "id": "wall-height",
+      "name": "Wall Height",
+      "v13Version": "7.0.8",
+      "role": "3d-canvas-vertical-walls",
+      "installMode": "manifest",
+      "manifest": "https://github.com/theripper93/wall-height/releases/download/7.0.8/module.json",
+      "expectedVersion": "7.0.8",
+      "foundryMinimum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Last Foundry-listed V13 wall-height release; compatible with the V13 3D Canvas/Levels stack."
+    },
+    {
+      "id": "levels",
+      "name": "Levels",
+      "v14Version": "7.0.3",
+      "v13Version": "6.1.0",
+      "role": "3d-canvas-multilevel-scenes",
+      "installMode": "manifest",
+      "manifest": "https://github.com/theripper93/Levels/releases/download/6.1.0/module.json",
+      "expectedVersion": "6.1.0",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Last V13-specific Levels release; newer 7.x targets V14."
+    },
+    {
+      "id": "levels-3d-preview",
+      "name": "3D Canvas",
+      "v14Version": "9.0.35",
+      "v13Version": "8.0.14",
+      "role": "3d-canvas-rendering-engine",
+      "installMode": "manifest",
+      "manifest": "https://github.com/theripper93/levels-3d-preview/releases/download/8.0.14/module.json",
+      "expectedVersion": "8.0.14",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Foundry registry lists 8.0.14 as latest V13-only 3D Canvas; never resolve the latest 9.x V14 version. Can view 2D maps and tokens as 3D scenes."
     }
   ]
 }
