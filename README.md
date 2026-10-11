@@ -1,54 +1,80 @@
 # Foundry V13 Dependencies
 
-Independent repository for **Foundry VTT v13 dependency modules**. This is the V13 companion to [Quarky/v14dependencies](https://github.com/Quarky/v14dependencies) and **does not install into V14**.
+This is the **Foundry VTT V13** dependency installer, independent of [Quarky/v14dependencies](https://github.com/Quarky/v14dependencies). It installs V13-compatible releases of third-party add-ons used in the user's Foundry V14 collection, **not V14-only versions**.
 
-### Install in Foundry V13
+## Install
 
-In Foundry's **Add-on Modules > Install Module > Manifest URL** field, use:
+Foundry V13 > Add-on Modules > Install Module > Manifest URL:
 
 `https://raw.githubusercontent.com/Quarky/V13dependencies/main/module.json`
 
-Alternatively [download the V13 module ZIP](https://github.com/Quarky/V13dependencies/raw/refs/heads/main/v13dependencies.zip), extract it, and run `./install.sh` (no arguments), or double-click `Install.command` on macOS. Shut down Foundry before running manual installation.
+Or download [v13dependencies.zip](./v13dependencies.zip) and double-click `Install.command` on macOS; `./install.sh` needs no arguments. Run the installer while Foundry is closed. V13 data root: `~/Library/Application Support/FoundryVTT`. V14 root `~/Library/Application Support/FoundryVTTV14` is never touched.
 
-By default, the installer skips already-installed modules. Use `./install.sh --update` to replace existing dependencies with timestamped backups and rollback, or `./install.sh --check` to check remote manifests without modifying anything.
+`./install.sh --check` checks versioned manifests, and `./install.sh --update` updates with timestamped backups and rollback. **Manual installer validates the downloaded archive's embedded module ID/version before installation** and skips previously installed add-ons by default. Versioned [pinned manifests](./pinned-manifests) avoid upstream `releases/latest` silently switching to V14.
 
-**V13 install path:** `~/Library/Application Support/FoundryVTT/Data/modules`
+## V13-compatible automatic dependencies
 
-**V14 install path, intentionally untouched:** `~/Library/Application Support/FoundryVTTV14/Data/modules`
-
-No worlds, game systems, campaign packages, or actors are modified. CZEPEKU Universe requires an active Czepeku subscription to access content.
-
-### Current V13 registry
-
-| Module | V14 release | V13-compatible version |
+| Add-on | V14 installed | V13 version |
 |---|---|---|
-| CZEPEKU Universe | 1.0.0 | **1.0.0** (v12–14) |
-| Cartorium Archive | 1.0.8 | **1.0.8** (v13–14) |
-| Complete Card Management | 3.0.3 | **2.1.2** (v13.351+) |
-| Card Hands List | 2.2.7 | **2.2.7** (v13–14) |
-| libWrapper | 1.13.5.1 | **1.13.4.0** (V13 verified) |
-| socketlib | 1.1.4 | **1.1.3** (V13 verified) |
-| Wall Height | — | **7.0.8** (V13 verified) |
-| Levels | 7.0.3 | **6.1.0** (V13 only) |
-| **3D Canvas** (`levels-3d-preview`) | 9.0.35 | **8.0.14** (V13 only) |
+| CZEPEKU Universe | 1.0.0 | **1.0.0** |
+| Cartorium Archive | 1.0.8 | **1.0.8** |
+| Complete Card Management | 3.0.3 | **2.1.2** (V13.351+) |
+| Card Hands List | 2.2.7 | **2.2.7** |
+| libWrapper | 1.13.5.1 | **1.13.4.0** |
+| socketlib | 1.1.4 | **1.1.3** |
+| Wall Height | — | **7.0.8** |
+| Levels | 7.0.3 | **6.1.0** |
+| 3D Canvas | 9.0.35 | **8.0.14** |
+| 3D to Isometric | 0.5.0 | **0.4.0** |
+| 5e Item Importer | 14.1.2 | **13.9.1** |
+| Advanced Magic — Spell Points | 3.3.14 | **3.2.40** |
+| Argon Combat HUD Core | 5.0.1 | **4.1.2** |
+| Argon Combat HUD D&D5e | 5.2.2 | **5.1.5** |
+| Isometric Perspective | 14.0.3 | **0.9.7** |
+| Multiple Document Selection | 14.01 | **13.03** |
+| Whisper Box | 3.0.8 | **3.0.6** |
+| Plutonium | 2.18.3.v14 | **2.18.3.v13** (V13-specific release) |
+| Soundscape | 1.2.0 | **1.2.0** (V13 alternative audio module) |
 
-**3D Canvas** is now free. The V13 stack uses the pinned 8.0.14 release, not the newer V14-only 9.x branch. 3D Canvas directly declares `lib-wrapper` as required. The module author also documents socketlib, Levels, and Wall Height as part of the 3D setup; those V13-compatible releases are registered here. The *3D Canvas Advanced Tools* premium module and optional asset packs are **not** bundled. This registry does not add any campaign or map assets.
+All auto-install entries use V13 compatible declared versions. For the ten additions after the initial V13 stack, versioned manifest copies pin publisher release ZIP URLs. No publisher source code or premium content is bundled in this repository.
 
-[Registry](./dependencies-v13.json) is version-pinned; the installer checks that each manifest/archive still matches the expected V13-compatible release. The nine modules here reflect the initial V14 dependency registry plus the requested 3D Canvas suite, **not** every module installed on the user's Mac.
+**Validation limit:** Published Foundry version listings and tagged module source metadata were checked. The two Argon project source tags still report stale internal versions (3.1.0 for core tag 4.1.2; 4.0 for DnD5e tag 5.1.5), despite their official Foundry release listings. Our metadata uses Foundry's published version numbers and versioned GitHub release ZIP paths. Confirm the actual archives before treating this pair as runtime-verified. No Foundry instances were launched during this work.
 
-3D Canvas source and version history: [Foundry package](https://foundryvtt.com/packages/levels-3d-preview) · [Module wiki](https://wiki.theripper93.com/levels-3d-preview) · [Levels](https://foundryvtt.com/packages/levels/) · [Wall Height](https://foundryvtt.com/packages/wall-height/).
+## Foundry V14 modules without a matching V13 release — real alternatives
 
-### Export every installed V14 and V13 module as JSON
+| V14 module | V13 alternative | Note |
+|---|---|---|
+| Ambience Forge 0.4.1 | **Soundscape 1.2.0** | Soundscape supports layered audio/soundboards, but is **not** a drop-in API replacement. If a custom module declares a hard requirement on `ambience-forge`, that custom module needs to be adapted to remove/change the dependency. |
+| Jornie's D&D5e HUD 0.4.1 | **Argon Core 4.1.2 + D&D5e HUD 5.1.5** | A different V13-supported D&D5e HUD, with different UI/behavior. |
+| Soundbrett 1.1.0 | **Soundscape 1.2.0** | A V13 soundboard alternative, not a same-ID port. |
 
-Double-click `Export-Module-Inventory.command`, or run `python3 export_modules.py`.
+## Published V13 map packs that need provider/Foundry installation
 
-Two reports are written to the macOS Desktop:
+- **Forgotten Adventures Battlemaps:** Publisher has a V13-compatible **1.1.x** release; downloads are Foundry-license exclusive and not served as a publicly downloadable ZIP. Select the proper older version in the Foundry package browser. Don't add V14-only 1.2.x.
+- **The MAD Cartographer — Phandelver & Below:** Publisher lists **13.0.2** for V13, at `https://themadcartographer.com/downloads/theme/phandelverv13/module.json`. The publisher currently returns **403 Forbidden** to anonymous automated requests. Use the publisher's supported login/install flow. It is recorded in [registry](./dependencies-v13.json) but excluded from automatic installation until access is confirmed.
+
+The dependency meta-module does not and must not contain campaign modules, maps, NPCs, game worlds or other user-made Foundry content. These two provider packs are recorded but intentionally excluded from the automatic `requires` list.
+
+## Export the installed V13/V14 packages
+
+Double-click `Export-Module-Inventory.command` or run `python3 export_modules.py`. JSON files on Desktop:
 
 - `foundry-v14-installed-modules.json`
 - `foundry-v13-installed-modules.json`
 
-The reports contain all module identifiers, installed versions, module titles, compatibility metadata, manifest links, and declared dependencies. These are installed modules, not per-world enabled/disabled lists. Please review any custom manifest URL that may contain an access token before sharing.
+Includes IDs, versions, compatibility data, and required/recommended relationships. Does not report per-world enabled module state. Review custom provider manifest URLs before sharing.
 
-Compare the V14 JSON with the V13 one to research and register additional V13-compatible module releases. Never substitute V14-only releases when a V13 version is unavailable.
+## Source references
 
-Sources: [CZEPEKU](https://foundryvtt.com/packages/czepeku) · [Cartorium](https://foundryvtt.com/packages/cartorium-browser) · [Complete Card Management](https://foundryvtt.com/packages/complete-card-management) · [Card Hands List](https://foundryvtt.com/packages/card-hands-list).
+- [Foundry package registry](https://foundryvtt.com/packages/)
+- [3D to Isometric](https://foundryvtt.com/packages/3d-to-iso)
+- [5e Item Importer](https://foundryvtt.com/packages/5e-item-importer)
+- [Advanced Magic – Spell Points](https://foundryvtt.com/packages/dnd5e-spellpoints)
+- [Argon Core](https://foundryvtt.com/packages/enhancedcombathud) / [Argon D&D5e](https://foundryvtt.com/packages/enhancedcombathud-dnd5e)
+- [Isometric Perspective](https://foundryvtt.com/packages/isometric-perspective)
+- [Multiple Document Selection](https://foundryvtt.com/packages/multiple-document-selection)
+- [Whisper Box](https://foundryvtt.com/packages/WhisperBox)
+- [Plutonium V13 manifest source](https://github.com/TheGiddyLimit/plutonium-next/blob/v2.18.3/module-foundry13.json)
+- [Soundscape](https://foundryvtt.com/packages/soundscape)
+- [Forgotten Adventures Battlemaps](https://foundryvtt.com/packages/fa-battlemaps)
+- [MAD Cartographer Phandelver](https://foundryvtt.com/packages/mad-phandelver)
