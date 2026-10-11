@@ -10,7 +10,7 @@ Foundry V13 > Add-on Modules > Install Module > Manifest URL:
 
 Or download [v13dependencies.zip](./v13dependencies.zip) and double-click `Install.command` on macOS; `./install.sh` needs no arguments. Run the installer while Foundry is closed. V13 data root: `~/Library/Application Support/FoundryVTT`. V14 root `~/Library/Application Support/FoundryVTTV14` is never touched.
 
-`./install.sh --check` checks versioned manifests, and `./install.sh --update` updates with timestamped backups and rollback. **Manual installer validates the downloaded archive's embedded module ID/version before installation** and skips previously installed add-ons by default. Versioned [pinned manifests](./pinned-manifests) avoid upstream `releases/latest` silently switching to V14.
+`./install.sh --check` checks pinned manifests without installing; `./install.sh --verify-archives` downloads and checks the embedded ID/version of every archive **without installing**; and `./install.sh --update` updates with timestamped backups and rollback. **Manual installer validates the downloaded archive's embedded module ID/version before installation** and skips previously installed add-ons by default. Versioned [pinned manifests](./pinned-manifests) avoid upstream `releases/latest` silently switching to V14. With the no-argument installer, installed package manifest URLs are also rewritten to their pinned V13 URLs to keep later Foundry updates from upgrading them to V14.
 
 ## V13-compatible automatic dependencies
 
