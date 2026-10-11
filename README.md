@@ -26,8 +26,17 @@ No worlds, game systems, campaign packages, or actors are modified. CZEPEKU Univ
 | Cartorium Archive | 1.0.8 | **1.0.8** (v13–14) |
 | Complete Card Management | 3.0.3 | **2.1.2** (v13.351+) |
 | Card Hands List | 2.2.7 | **2.2.7** (v13–14) |
+| libWrapper | 1.13.5.1 | **1.13.4.0** (V13 verified) |
+| socketlib | 1.1.4 | **1.1.3** (V13 verified) |
+| Wall Height | — | **7.0.8** (V13 verified) |
+| Levels | 7.0.3 | **6.1.0** (V13 only) |
+| **3D Canvas** (`levels-3d-preview`) | 9.0.35 | **8.0.14** (V13 only) |
 
-[Registry](./dependencies-v13.json) is version-pinned; the installer checks that each manifest/archive still matches the expected V13-compatible release. The four modules here reflect only the dependencies already registered in V14, **not** all modules installed on the user's Mac.
+**3D Canvas** is now free. The V13 stack uses the pinned 8.0.14 release, not the newer V14-only 9.x branch. 3D Canvas directly declares `lib-wrapper` as required. The module author also documents socketlib, Levels, and Wall Height as part of the 3D setup; those V13-compatible releases are registered here. The *3D Canvas Advanced Tools* premium module and optional asset packs are **not** bundled. This registry does not add any campaign or map assets.
+
+[Registry](./dependencies-v13.json) is version-pinned; the installer checks that each manifest/archive still matches the expected V13-compatible release. The nine modules here reflect the initial V14 dependency registry plus the requested 3D Canvas suite, **not** every module installed on the user's Mac.
+
+3D Canvas source and version history: [Foundry package](https://foundryvtt.com/packages/levels-3d-preview) · [Module wiki](https://wiki.theripper93.com/levels-3d-preview) · [Levels](https://foundryvtt.com/packages/levels/) · [Wall Height](https://foundryvtt.com/packages/wall-height/).
 
 ### Export every installed V14 and V13 module as JSON
 
