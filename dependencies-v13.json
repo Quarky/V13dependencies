@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "purpose": "V13-compatible, pinned dependencies mirrored from Quarky/v14dependencies; no campaigns or system modules",
+  "purpose": "V13-compatible pinned Foundry add-on dependencies, never V14 only; plus manual licensed content and documented alternatives. No campaign modules.",
   "foundry": {
     "generation": 13,
     "dataRoot": "~/Library/Application Support/FoundryVTT",
@@ -128,6 +128,203 @@
       "foundryMaximum": "13",
       "verifiedFoundry": 13,
       "notes": "Foundry registry lists 8.0.14 as latest V13-only 3D Canvas; never resolve the latest 9.x V14 version. Can view 2D maps and tokens as 3D scenes."
+    },
+    {
+      "id": "3d-to-iso",
+      "name": "3D to Isometric",
+      "v14Version": "0.5.0",
+      "v13Version": "0.4.0",
+      "role": "isometric-rendering",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/3d-to-iso.json",
+      "expectedVersion": "0.4.0",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "V13 version 0.4.0 verified by Foundry. Archive pinned to publisher's 0.4.0 release."
+    },
+    {
+      "id": "5e-item-importer",
+      "name": "5e Item Importer",
+      "v14Version": "14.1.2",
+      "v13Version": "13.9.1",
+      "role": "dnd5e-item-importing",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/5e-item-importer.json",
+      "expectedVersion": "13.9.1",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "V13 release from publisher, version 13.9.1. D&D5e 5.1.10+ per release notes."
+    },
+    {
+      "id": "dnd5e-spellpoints",
+      "name": "Advanced Magic - Spell Points System 5e",
+      "v14Version": "3.3.14",
+      "v13Version": "3.2.40",
+      "role": "dnd5e-spell-point-rules",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/dnd5e-spellpoints.json",
+      "expectedVersion": "3.2.40",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Foundry 13.351 V13-only release."
+    },
+    {
+      "id": "enhancedcombathud",
+      "name": "Argon - Combat HUD (CORE)",
+      "v14Version": "5.0.1",
+      "v13Version": "4.1.2",
+      "role": "v13-combat-hud-core",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud.json",
+      "expectedVersion": "4.1.2",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Foundry catalog verifies 4.1.2 for V13. Tagged source module.json has stale 3.1.0 version; pinned manifest corrects advertised version. Validate publisher release asset in Foundry before relying on this."
+    },
+    {
+      "id": "enhancedcombathud-dnd5e",
+      "name": "Argon - Combat HUD (DND5E)",
+      "v14Version": "5.2.2",
+      "v13Version": "5.1.5",
+      "role": "v13-combat-hud-dnd5e",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud-dnd5e.json",
+      "expectedVersion": "5.1.5",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Foundry catalog verifies 5.1.5 for V13. Tagged source module.json has stale 4.0 version; pinned manifest corrects advertised version. Requires Argon CORE V13."
+    },
+    {
+      "id": "isometric-perspective",
+      "name": "Isometric Perspective",
+      "v14Version": "14.0.3",
+      "v13Version": "0.9.7",
+      "role": "isometric-map-perspective",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/isometric-perspective.json",
+      "expectedVersion": "0.9.7",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Foundry 13-verified v0.9.7; supports projection/scene art changes."
+    },
+    {
+      "id": "multiple-document-selection",
+      "name": "Multiple Document Selection",
+      "v14Version": "14.01",
+      "v13Version": "13.03",
+      "role": "multi-document-sidebar",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/multiple-document-selection.json",
+      "expectedVersion": "13.03",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Official Foundry V13 release 13.03."
+    },
+    {
+      "id": "WhisperBox",
+      "name": "Whisper Box",
+      "v14Version": "3.0.8",
+      "v13Version": "3.0.6",
+      "role": "whisper-window",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/WhisperBox.json",
+      "expectedVersion": "3.0.6",
+      "foundryMinimum": "13.350",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Publisher v3.0.6 for Foundry 13.350+."
+    },
+    {
+      "id": "plutonium",
+      "name": "Plutonium",
+      "v14Version": "2.18.3.v14",
+      "v13Version": "2.18.3.v13",
+      "role": "dnd5e-content-importer",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/plutonium.json",
+      "expectedVersion": "2.18.3.v13",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Official separate v13 build (v2.18.3), version 2.18.3.v13, no repacking of publisher zip."
+    },
+    {
+      "id": "soundscape",
+      "name": "Soundscape",
+      "v14Version": "1.2.0",
+      "v13Version": "1.2.0",
+      "role": "v13-audio-alternative",
+      "installMode": "manifest",
+      "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/soundscape.json",
+      "expectedVersion": "1.2.0",
+      "foundryMinimum": "13",
+      "foundryMaximum": "13",
+      "verifiedFoundry": 13,
+      "notes": "Publisher's Foundry 13-verified V13 version; provides soundboard and layered soundscapes. Alternative for Ambience Forge and Soundbrett, not a drop-in code/API replacement."
+    },
+    {
+      "id": "fa-battlemaps",
+      "name": "Forgotten Adventures Battlemaps",
+      "v14Version": "1.2.26",
+      "v13Version": "1.1.x",
+      "role": "provider-licensed-map-pack",
+      "installMode": "foundry-exclusive-manual",
+      "manifest": null,
+      "verifiedFoundry": 13,
+      "notes": "Foundry official exclusive, download licensed version 1.1.x through Foundry V13 app, not via public repo/installer; licensing required. Do not auto-install 1.2.x (V14 only).",
+      "publisherPage": "https://foundryvtt.com/packages/fa-battlemaps"
+    },
+    {
+      "id": "mad-phandelver",
+      "name": "MAD Cartographer Phandelver & Below (Free) Map Pack",
+      "v14Version": "14.1.0",
+      "v13Version": "13.0.2",
+      "role": "provider-map-pack",
+      "installMode": "publisher-access-manual",
+      "manifest": "https://themadcartographer.com/downloads/theme/phandelverv13/module.json",
+      "expectedVersion": "13.0.2",
+      "verifiedFoundry": 13,
+      "notes": "V13-compatible publisher release 13.0.2. Publisher versioned manifest returned HTTP 403 to automated verifier. Use Foundry/publisher login and manual installation. Never assume URL is publicly installable.",
+      "publisherPage": "https://foundryvtt.com/packages/mad-phandelver"
+    }
+  ],
+  "alternatives": [
+    {
+      "v14ModuleId": "ambience-forge",
+      "v14Version": "0.4.1",
+      "v13ReplacementId": "soundscape",
+      "v13ReplacementVersion": "1.2.0",
+      "reason": "Ambience Forge has no published V13 release; Soundscape supports layered audio and a soundboard on V13.",
+      "caution": "Different module ID and API. Existing module that requires ambience-forge still needs a V13 code change; Soundscape alone does NOT satisfy dependency."
+    },
+    {
+      "v14ModuleId": "dnd5e-jornies-hud",
+      "v14Version": "0.4.1",
+      "v13ReplacementIds": [
+        "enhancedcombathud",
+        "enhancedcombathud-dnd5e"
+      ],
+      "v13ReplacementVersions": [
+        "4.1.2",
+        "5.1.5"
+      ],
+      "reason": "No published V13 release of Jornie's HUD; Argon is a V13-native D&D5e action/combat HUD.",
+      "caution": "Different UI/features; must explicitly enable Argon modules in desired V13 world."
+    },
+    {
+      "v14ModuleId": "soundbrett",
+      "v14Version": "1.1.0",
+      "v13ReplacementId": "soundscape",
+      "v13ReplacementVersion": "1.2.0",
+      "reason": "Soundbrett has only published V14 releases; Soundscape 1.2.0 provides a V13-compatible soundboard.",
+      "caution": "Different module ID/features, not drop-in for custom code."
     }
   ]
 }
