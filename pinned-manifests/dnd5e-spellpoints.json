@@ -1,0 +1,106 @@
+{
+  "id": "dnd5e-spellpoints",
+  "title": "Advanced Magic - Spell Points System 5e",
+  "description": "FoundryVTT module for Spell Points System in D&amp;D5e. This module use the optional rules found on DMG to allow character to cast spells using a resource named 'Spell Points'",
+  "version": "3.2.40",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
+        "compatibility": {
+          "verified": "5.2.4",
+          "minimum": "5.0.0"
+        }
+      }
+    ]
+  },
+  "url": "https://github.com/misthero/dnd5e-spellpoints",
+  "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/dnd5e-spellpoints.json",
+  "download": "https://github.com/misthero/dnd5e-spellpoints/releases/download/v3.2.40/dnd5e-spellpoints.zip",
+  "authors": [
+    {
+      "name": "misthero",
+      "url": "https://github.com/misthero",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "css/sp-styles.css"
+  ],
+  "packs": [
+    {
+      "name": "module-items",
+      "label": "Spell Points",
+      "path": "packs/items",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "lang/it.json",
+      "flags": {}
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json",
+      "flags": {}
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json",
+      "flags": {}
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json",
+      "flags": {}
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json",
+      "flags": {}
+    }
+  ],
+  "media": [
+    {
+      "type": "icon",
+      "url": "modules/dnd5e-spellpoints/img/mana-icon.webp"
+    },
+    {
+      "type": "setup",
+      "url": "modules/dnd5e-spellpoints/img/AdvancedMagic.webp"
+    },
+    {
+      "type": "cover",
+      "url": "modules/dnd5e-spellpoints/img/AdvancedMagic.webp"
+    }
+  ]
+}
