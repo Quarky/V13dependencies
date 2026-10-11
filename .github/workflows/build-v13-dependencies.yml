@@ -1,0 +1,58 @@
+name: Package V13 Dependencies
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'module.json'
+      - 'dependencies-v13.json'
+      - 'dependency_manager.py'
+      - 'install.sh'
+      - 'Install.command'
+      - 'export_modules.py'
+      - 'Export-Module-Inventory.command'
+      - 'README.md'
+      - '.github/workflows/build-v13-dependencies.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate metadata and code
+        run: |
+          python3 -m json.tool module.json >/dev/null
+          python3 -m json.tool dependencies-v13.json >/dev/null
+          python3 -m py_compile dependency_manager.py export_modules.py
+          bash -n install.sh Install.command Export-Module-Inventory.command
+          python3 - <<'PY'
+          import json
+          manifest=json.load(open("module.json"))
+          assert manifest["id"]=="v13dependencies"
+          assert manifest["download"].endswith("/V13dependencies/main/v13dependencies.zip")
+          assert manifest["compatibility"]["maximum"]=="13"
+          PY
+      - name: Build installable Foundry V13 module archive
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          names = ['module.json','dependencies-v13.json','dependency_manager.py','install.sh','Install.command','export_modules.py','Export-Module-Inventory.command','README.md']
+          with zipfile.ZipFile('v13dependencies.zip','w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+              for name in names:
+                  file = Path(name)
+                  info = zipfile.ZipInfo('v13dependencies/'+name)
+                  info.external_attr = ((0o755 if file.suffix in ('.sh','.command') else 0o644)<<16)
+                  info.compress_type = zipfile.ZIP_DEFLATED
+                  z.writestr(info,file.read_bytes())
+          PY
+      - name: Commit module ZIP
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v13dependencies.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Build V13 dependencies module ZIP"
+            git push
+          fi
