@@ -71,18 +71,18 @@ def find_root(folder, expected):
         fail("Expected one matching archive module.json for " + expected + "; found " + str(len(matches)))
     return matches[0]
 
-def install(entry, modules, backups, update=False, check=False):
+def install(entry, modules, backups, update=False, check=False, verify_archives=False):
     target = modules / entry["id"]
-    if target.exists() and not update and not check:
+    if target.exists() and not update and not check and not verify_archives:
         print("SKIP (already installed):", entry["name"], "| use --update to replace")
         return
     print("Checking:", entry["name"])
     published = remote(entry["manifest"], entry["name"] + " manifest")
     url = validate(published, entry)
-    if check:
+    if check and not verify_archives:
         print("  OK V13 manifest:", entry["id"], entry["expectedVersion"])
         return
-    with tempfile.TemporaryDirectory(prefix=".v13dependencies-", dir=modules) as temp:
+    with tempfile.TemporaryDirectory(prefix=".v13dependencies-", dir=None if verify_archives else modules) as temp:
         temp = Path(temp)
         archive = temp / "module.zip"
         extracted = temp / "extracted"
@@ -91,6 +91,14 @@ def install(entry, modules, backups, update=False, check=False):
         extract_safe(archive, extracted)
         package_root, package_metadata = find_root(extracted, entry["id"])
         validate(package_metadata, entry)
+        if verify_archives:
+            print("  VERIFIED V13 archive:", entry["id"], entry["expectedVersion"])
+            return
+        # Pin the installed package's own future updater URL, not only the meta-module.
+        # Otherwise a regular Foundry update could follow the author's latest V14 manifest.
+        package_metadata["manifest"] = entry["manifest"]
+        package_metadata["download"] = url
+        (package_root / "module.json").write_text(json.dumps(package_metadata, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
         previous = target.exists()
         backup = backups / entry["id"]
         if previous:
@@ -113,13 +121,14 @@ def install(entry, modules, backups, update=False, check=False):
 def main():
     parser = argparse.ArgumentParser(description="No-argument installer for V13 dependencies; default: install only missing modules")
     parser.add_argument("--update", action="store_true", help="Replace installed dependencies with timestamped backups")
-    parser.add_argument("--check", action="store_true", help="Verify remote manifests without installing")
+    parser.add_argument("--check", action="store_true", help="Verify pinned remote manifests without installing")
+    parser.add_argument("--verify-archives", action="store_true", help="Download and validate each V13 archive without installing any modules")
     args = parser.parse_args()
     root = Path(os.getenv("FOUNDRY_V13_ROOT", str(DEFAULT_ROOT))).expanduser().resolve()
     if "foundryvttv14" in str(root).lower():
         fail("Refusing to use the V14 data root for a V13 dependency install")
     modules = root / "Data" / "modules"
-    if not args.check:
+    if not args.check and not args.verify_archives:
         modules.mkdir(parents=True, exist_ok=True)
     stamp = datetime.datetime.now().strftime("%Y-%m-%d %H%M%S %f")
     backups = root / "Data" / ".v13dependencies-backups" / stamp
@@ -133,7 +142,7 @@ def main():
         if entry.get("installMode") != "manifest":
             continue
         try:
-            install(entry, modules, backups, update=args.update, check=args.check)
+            install(entry, modules, backups, update=args.update, check=args.check, verify_archives=args.verify_archives)
         except Exception as exc:
             print("FAILED:", entry["name"], str(exc), file=sys.stderr)
             failures += 1
