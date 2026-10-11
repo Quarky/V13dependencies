@@ -98,7 +98,7 @@ def install(entry, modules, backups, update=False, check=False, verify_archives=
         # Otherwise a regular Foundry update could follow the author's latest V14 manifest.
         package_metadata["manifest"] = entry["manifest"]
         package_metadata["download"] = url
-        (package_root / "module.json").write_text(json.dumps(package_metadata, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        (package_root / "module.json").write_text(json.dumps(package_metadata, ensure_ascii=False, indent=2) + chr(10), encoding="utf-8")
         previous = target.exists()
         backup = backups / entry["id"]
         if previous:
