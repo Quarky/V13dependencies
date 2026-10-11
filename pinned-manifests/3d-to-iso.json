@@ -1,0 +1,46 @@
+{
+  "id": "3d-to-iso",
+  "title": "3D to Isometric",
+  "description": "A one-off 3D to static isometric image rendering tool for Foundry VTT.",
+  "version": "0.4.0",
+  "authors": [
+    {
+      "name": "JoshBrodieNZ",
+      "discord": "joshbrodienz",
+      "url": "https://www.patreon.com/cw/LudibriumVTT"
+    }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "scripts": [
+    "vendor/three.min.js",
+    "vendor/GLTFLoader.js",
+    "vendor/DRACOLoader.js"
+  ],
+  "esmodules": [
+    "scripts/utils.js",
+    "scripts/isometric-renderer.js",
+    "scripts/token.js",
+    "scripts/tile.js",
+    "scripts/settings.js"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "styles": [
+    "styles/isometric-renderer.css",
+    "styles/gif-importer.css"
+  ],
+  "url": "https://github.com/Ludibrium-VTT/3d-to-iso",
+  "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/3d-to-iso.json",
+  "download": "https://github.com/Ludibrium-VTT/3d-to-iso/releases/download/0.4.0/3d-to-iso.zip",
+  "bugs": "https://github.com/Ludibrium-VTT/3d-to-iso/issues",
+  "readme": "README.md"
+}
