@@ -1,0 +1,31 @@
+{
+  "id": "WhisperBox",
+  "title": "Whisper Box",
+  "description": "A module that allows you to create a dedicated whisper window (with history, and per player, if desired).",
+  "authors": [
+    {
+      "name": "Richard Bellingham"
+    },
+    {
+      "name": "Jean-Baptiste Louvet"
+    }
+  ],
+  "version": "3.0.6",
+  "compatibility": {
+    "minimum": "13.350",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "scripts": [
+    "./WhisperBox.js"
+  ],
+  "styles": [
+    "./style.css"
+  ],
+  "socket": false,
+  "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/WhisperBox.json",
+  "download": "https://github.com/Sk1mble/WhisperBox/archive/refs/tags/v3.0.6.zip",
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
+}
