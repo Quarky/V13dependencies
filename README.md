@@ -16,12 +16,12 @@ Or download [v13dependencies.zip](./v13dependencies.zip) and double-click `Insta
 
 | Add-on | V14 installed | V13 version |
 |---|---|---|
-| CZEPEKU Universe | 1.0.0 | **1.0.0** |
+| CZEPEKU Universe | 1.0.0 | **1.1.0** (live publisher manifest, V13 archive audit pending) |
 | Cartorium Archive | 1.0.8 | **1.0.8** |
 | Complete Card Management | 3.0.3 | **2.1.2** (V13.351+) |
 | Card Hands List | 2.2.7 | **2.2.7** |
 | libWrapper | 1.13.5.1 | **1.13.4.0** |
-| socketlib | 1.1.4 | **1.1.3** |
+| socketlib | 1.1.4 | **v1.1.3** (publisher manifest version string) |
 | Wall Height | — | **7.0.8** |
 | Levels | 7.0.3 | **6.1.0** |
 | 3D Canvas | 9.0.35 | **8.0.14** |
