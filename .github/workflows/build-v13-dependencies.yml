@@ -11,107 +11,116 @@ on:
       - 'export_modules.py'
       - 'Export-Module-Inventory.command'
       - 'README.md'
+      - 'scripts/**'
       - 'pinned-manifests/**'
       - '.github/workflows/build-v13-dependencies.yml'
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: v13-package-validation
+  cancel-in-progress: false
 jobs:
-  build:
+  audit-and-build:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - name: Validate metadata and code
+        with:
+          persist-credentials: true
+      - name: Validate local metadata and scripts
         run: |
           python3 -m json.tool module.json >/dev/null
           python3 -m json.tool dependencies-v13.json >/dev/null
           for file in pinned-manifests/*.json; do python3 -m json.tool "$file" >/dev/null; done
-          python3 -m py_compile dependency_manager.py export_modules.py
+          python3 -m py_compile dependency_manager.py export_modules.py scripts/validate_v13_dependencies.py
           bash -n install.sh Install.command Export-Module-Inventory.command
           python3 - <<'PY'
           import json
-          manifest=json.load(open("module.json"))
-          assert manifest["id"]=="v13dependencies"
-          assert manifest["download"].endswith("/V13dependencies/main/v13dependencies.zip")
-          assert manifest["compatibility"]["maximum"]=="13"
-          registry=json.load(open("dependencies-v13.json"))
-          automatic={entry["id"]:entry for entry in registry["packages"] if entry.get("installMode")=="manifest"}
-          assert set(automatic)==set(dep["id"] for dep in manifest["relationships"]["requires"])
-          for ident, entry in automatic.items():
-              assert entry["manifest"].startswith("https://")
-              if "/pinned-manifests/" in entry["manifest"]:
-                  p="pinned-manifests/"+ident+".json"
-                  data=json.load(open(p))
-                  assert data["id"]==ident, (ident, data["id"])
-                  assert data["version"]==entry["expectedVersion"],ident
-                  assert str(data["compatibility"].get("minimum","")).split(".")[0]!="14",ident
-                  assert data["download"].startswith("https://"),ident
-                  assert "/latest/" not in data["download"],ident
-          assert not any(x["id"] in automatic for x in registry["packages"] if x.get("installMode")!="manifest")
-          PY
-      - name: Verify all mandatory manifests over HTTPS (reject HTML, 403, 404, mismatches)
-        run: |
-          python3 - <<'PY'
-          import json, urllib.request, urllib.error
-          from urllib.parse import urlparse
           m=json.load(open("module.json"))
           reg=json.load(open("dependencies-v13.json"))
-          expected={x["id"]:x for x in reg["packages"] if x.get("installMode")=="manifest"}
-          errors=[]
-          for dep in m["relationships"]["requires"]:
-              ident=dep["id"]
-              url=dep["manifest"]
-              try:
-                  if not url.startswith("https://") or "/blob/" in url:
-                      raise ValueError("not a direct HTTPS manifest URL")
-                  req=urllib.request.Request(url,headers={"User-Agent":"FoundryV13ManifestVerifier/1.0","Accept":"application/json"})
-                  with urllib.request.urlopen(req,timeout=25) as response:
-                      final=response.geturl()
-                      payload=response.read(2_000_001)
-                      if len(payload)>2_000_000: raise ValueError("manifest too large")
-                      if not final.startswith("https://"): raise ValueError("redirected away from HTTPS")
-                  if payload.lstrip().startswith((b"<",b"<!DOCTYPE")):
-                      raise ValueError("HTML response, not JSON")
-                  data=json.loads(payload.decode("utf-8-sig"))
-                  if not isinstance(data,dict): raise ValueError("not a JSON object")
-                  if data.get("id")!=ident: raise ValueError(f"ID mismatch {data.get('id')!r}")
-                  if str(data.get("version"))!=str(expected[ident]["expectedVersion"]):
-                      raise ValueError(f"version mismatch {data.get('version')!r} != {expected[ident]['expectedVersion']!r}")
-                  compat=data.get("compatibility",{})
-                  minimum=str(compat.get("minimum","0"))
-                  maximum=str(compat.get("maximum","999"))
-                  if int(minimum.split(".")[0])>13 or int(maximum.split(".")[0])<13:
-                      raise ValueError(f"not V13-compatible: {compat!r}")
-                  download=data.get("download","")
-                  if not isinstance(download,str) or not download.startswith("https://") or "/blob/" in download:
-                      raise ValueError("invalid HTTPS archive URL")
-                  print(f"OK {ident} {data['version']} {url}")
-              except Exception as exc:
-                  errors.append(f"{ident}: {url}: {type(exc).__name__}: {exc}")
-          if errors:
-              print("\\n".join(errors))
-              raise SystemExit(f"FAILED: {len(errors)} mandatory manifests invalid; refusing to publish ZIP")
+          automatic={x["id"]:x for x in reg["packages"] if x.get("installMode")=="manifest"}
+          assert m["id"]=="v13dependencies"
+          assert m["compatibility"]["maximum"]=="13"
+          assert m["download"].endswith("/V13dependencies/main/v13dependencies.zip")
+          assert len(m["relationships"]["requires"])==len(automatic)
+          assert set(automatic)=={d["id"] for d in m["relationships"]["requires"]}
+          for d in m["relationships"]["requires"]:
+            assert d["manifest"]==automatic[d["id"]]["manifest"],d["id"]
           PY
-      - name: Build installable Foundry V13 module archive
+      - name: Check live HTTPS manifests
+        id: manifests
+        continue-on-error: true
+        run: python3 scripts/validate_v13_dependencies.py --report validation/v13-manifests.json
+      - name: Persist manifest HTTP evidence
+        if: always()
+        run: |
+          if [ -f validation/v13-manifests.json ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add validation/v13-manifests.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Audit V13 manifest HTTP responses [skip ci]"
+              git pull --rebase origin main
+              git push origin HEAD:main
+            fi
+          fi
+      - name: Require every mandatory manifest to pass
+        run: |
+          python3 - <<'PY'
+          import json
+          report=json.load(open("validation/v13-manifests.json"))
+          assert report["success"], f"Mandatory manifest failures: {report['failed']}; see validation/v13-manifests.json"
+          print(f"Validated {report['passed']} live V13 manifests")
+          PY
+      - name: Check actual publisher module ZIP archives
+        id: archives
+        continue-on-error: true
+        run: python3 scripts/validate_v13_dependencies.py --archives --report validation/v13-archives.json
+      - name: Persist real archive HTTP and ZIP evidence
+        if: always()
+        run: |
+          if [ -f validation/v13-archives.json ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add validation/v13-archives.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Audit V13 module release archives [skip ci]"
+              git pull --rebase origin main
+              git push origin HEAD:main
+            fi
+          fi
+      - name: Require every mandatory archive to pass
+        run: |
+          python3 - <<'PY'
+          import json
+          report=json.load(open("validation/v13-archives.json"))
+          assert report["success"], f"Mandatory archive failures: {report['failed']}; see validation/v13-archives.json"
+          print(f"Validated {report['passed']} real V13 module ZIP files")
+          PY
+      - name: Build installable Foundry V13 module ZIP
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import zipfile
           names = ['module.json','dependencies-v13.json','dependency_manager.py','install.sh','Install.command','export_modules.py','Export-Module-Inventory.command','README.md'] + [str(p) for p in sorted(Path('pinned-manifests').glob('*.json'))]
           with zipfile.ZipFile('v13dependencies.zip','w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-              for name in names:
-                  file = Path(name)
-                  info = zipfile.ZipInfo('v13dependencies/'+name)
-                  info.external_attr = ((0o755 if file.suffix in ('.sh','.command') else 0o644)<<16)
-                  info.compress_type = zipfile.ZIP_DEFLATED
-                  z.writestr(info,file.read_bytes())
+            for name in names:
+              p=Path(name)
+              info=zipfile.ZipInfo('v13dependencies/'+name)
+              info.external_attr=((0o755 if p.suffix in ('.sh','.command') else 0o644)<<16)
+              info.compress_type=zipfile.ZIP_DEFLATED
+              z.writestr(info,p.read_bytes())
+          with zipfile.ZipFile('v13dependencies.zip') as z:
+            assert json.loads(z.read('v13dependencies/module.json'))['id']=='v13dependencies'
           PY
-      - name: Commit module ZIP
+      - name: Commit verified module ZIP
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add v13dependencies.zip
           if ! git diff --cached --quiet; then
-            git commit -m "Build V13 dependencies module ZIP"
-            git push
+            git commit -m "Build verified V13 dependencies module ZIP [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
