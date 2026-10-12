@@ -150,6 +150,8 @@ def main():
     report = {
         "checked_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
         "meta_version": meta.get("version"),
+        "github_run_id": os.environ.get("GITHUB_RUN_ID"),
+        "github_sha": os.environ.get("GITHUB_SHA"),
         "archives_checked": args.archives,
         "modules": [],
         "failed": [],
