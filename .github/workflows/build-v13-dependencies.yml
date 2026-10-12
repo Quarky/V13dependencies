@@ -36,7 +36,7 @@ jobs:
           assert manifest["compatibility"]["maximum"]=="13"
           registry=json.load(open("dependencies-v13.json"))
           automatic={entry["id"]:entry for entry in registry["packages"] if entry.get("installMode")=="manifest"}
-          assert set(automatic)==set(dep["id"] for dep in manifest["relationships"]["requires"])
+          assert not manifest["relationships"]["requires"], "External modules must not block meta-module installation"
           for ident, entry in automatic.items():
               assert entry["manifest"].startswith("https://")
               if "/pinned-manifests/" in entry["manifest"]:
