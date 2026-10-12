@@ -1,8 +1,8 @@
 {
   "id": "v13dependencies",
   "title": "Foundry V13 Dependencies",
-  "description": "Foundry V13 dependency meta-module with pinned V13-compatible releases, older V13 alternatives for V14-only packages, and no campaign content.",
-  "version": "1.2.0",
+  "description": "Foundry V13 dependency catalog. Optional add-ons are recommendations, not mandatory installation prerequisites.",
+  "version": "1.2.1",
   "compatibility": {
     "minimum": "13",
     "verified": "13",
@@ -17,7 +17,8 @@
   "manifest": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/module.json",
   "download": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/v13dependencies.zip",
   "relationships": {
-    "requires": [
+    "requires": [],
+    "recommends": [
       {
         "id": "czepeku",
         "type": "module",
