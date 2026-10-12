@@ -130,7 +130,10 @@ def validate_archive(download_url, package, td):
         if len(hits) != 1:
             raise ValueError(f"expected exactly one embedded module.json ID {package['id']}; found {len(hits)}")
         path, embedded = hits[0]
-        validate_package(embedded, package)
+        if str(embedded.get("version")) != str(package["expectedVersion"]):
+            raise ValueError(f"archive embedded version differs: {embedded.get('version')!r}")
+        if not compatible_v13(embedded.get("compatibility") or {}):
+            raise ValueError(f"archive embedded module is not V13-compatible: {embedded.get('compatibility')!r}")
     evidence["embedded_manifest"] = path
     return evidence
 
