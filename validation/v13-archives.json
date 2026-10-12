@@ -1,0 +1,448 @@
+{
+  "checked_utc": "2026-10-12T16:44:07.403315+00:00",
+  "meta_version": "1.2.2",
+  "archives_checked": true,
+  "modules": [
+    {
+      "id": "czepeku",
+      "expected_version": "1.1.0",
+      "manifest_url": "https://www.czepeku.com/fvtt-module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://dvw4irqpatydnndw.public.blob.vercel-storage.com/fvtt/latest/module.json",
+        "content_type": "application/json",
+        "bytes": 656,
+        "sha256": "41cbd04842a861b37947252f51c99c063827f8e29b555cdc9693396e16635b87"
+      },
+      "download_url": "https://dvw4irqpatydnndw.public.blob.vercel-storage.com/fvtt/v1.1.0/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://dvw4irqpatydnndw.public.blob.vercel-storage.com/fvtt/v1.1.0/module.zip",
+        "content_type": "application/zip",
+        "bytes": 1255190,
+        "sha256": "fe19be0ba040b9eb5bb69fe3b82a66d3cd23e51baf0b9321d7166bf7eeb0261c",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "cartorium-browser",
+      "expected_version": "1.0.8",
+      "manifest_url": "https://raw.githubusercontent.com/cartorium/Cartorium-assets/main/cartorium-browser/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/cartorium/Cartorium-assets/main/cartorium-browser/module.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 775,
+        "sha256": "bfc22009cb3ac393945993e9b1ce30d52ba0d2e079ee2be23801ed855725bcbb"
+      },
+      "download_url": "https://github.com/cartorium/Cartorium-assets/releases/download/cartorium-browser-v1.0.8/cartorium-browser.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1219011091/184c31c0-d6bf-4a65-a708-07e1b8683153?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A41%3A20Z&rscd=attachment%3B+filename%3Dcartorium-browser.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A41%3A11Z&ske=2026-10-12T17%3A41%3A20Z&sks=b&skv=2018-11-09&sig=aLCH7zRvxCoouIx9tLZzo3NgGX7ushrqtICjjYKdDCY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0OCwibmJmIjoxNzkxODIzNDQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.UgBE7hTgcQ27JiD370Mb0ApAjg1Vjr7_rrifyALYNnM&response-content-disposition=attachment%3B%20filename%3Dcartorium-browser.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1426122,
+        "sha256": "8128b3edf9421d2a3a53b8902ca9acf65ad94abca098c7bbd2535260459262ed",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "complete-card-management",
+      "expected_version": "2.1.2",
+      "manifest_url": "https://github.com/MetaMorphic-Digital/complete-card-management/releases/download/v2.1.2/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/807252296/9ff69dad-ba9e-4496-9bae-214cf7dca8cb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A25%3A19Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A24%3A51Z&ske=2026-10-12T17%3A25%3A19Z&sks=b&skv=2018-11-09&sig=zlJUrUoXqmfxhfSpX11MwU5HFFYhxWcyZj0Vq3dC2M4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0MSwibmJmIjoxNzkxODIzNDQxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.uzmBkgY0U_0lGzAnVcD0_U7eNvqIDkuS7wkRQKJqotA&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1909,
+        "sha256": "0be88729587d26f96d90f4bc0a58e673ccc0c215a45f111db6b59850990e06d7"
+      },
+      "download_url": "https://github.com/MetaMorphic-Digital/complete-card-management/releases/download/v2.1.2/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/807252296/3694e823-859d-42a7-92c1-97b8a82a8d89?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A29%3A58Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A29%3A54Z&ske=2026-10-12T17%3A29%3A58Z&sks=b&skv=2018-11-09&sig=jaunwhYPymF%2F41HSq52Vh2wkJQfwVyRi5zdcB6f1%2Fi0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0OSwibmJmIjoxNzkxODIzNDQ5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.4fjv1qAocMqXZKf2Wv6eylbFTLJTeNidZ9JIPWoIsdc&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 468738,
+        "sha256": "0261bdf0c0f55ecfb7fe092d73d2d65765768e71b4aa0b01ba09540f85bf966a",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "card-hands-list",
+      "expected_version": "2.2.7",
+      "manifest_url": "https://github.com/kristianserrano/card-hands-list/releases/download/2.2.7/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/646518515/f8350d79-6800-4b72-8c6f-307db53f03d5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A32%3A55Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A31%3A59Z&ske=2026-10-12T17%3A32%3A55Z&sks=b&skv=2018-11-09&sig=ipVu8lhEhqmOBKipH8tf55GVKK%2BsFt4v6CvFAxYqRNE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0MiwibmJmIjoxNzkxODIzNDQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gblHnVvCcO-2WuSUH2vTBMY0fYZ5PszeTKqjRUPZ6qA&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 2192,
+        "sha256": "e9de267e5db5d39cd59d5d908569baad2bc17ca0d13a3ea97c65484747d0cea6"
+      },
+      "download_url": "https://github.com/kristianserrano/card-hands-list/releases/download/2.2.7/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/646518515/a6615e96-77ff-4087-9db1-b4c49aacda68?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A34%3A54Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A33%3A57Z&ske=2026-10-12T17%3A34%3A54Z&sks=b&skv=2018-11-09&sig=MTcptJeNKZihqf4uY%2FEHqECOlg49HqMmrryTCumml38%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0OSwibmJmIjoxNzkxODIzNDQ5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.4fjv1qAocMqXZKf2Wv6eylbFTLJTeNidZ9JIPWoIsdc&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 66890,
+        "sha256": "78b8389579d08ec4370a58fba8a69a31a360e2dfdaa1f62d3baefcc4a6902221",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "lib-wrapper",
+      "expected_version": "1.13.4.0",
+      "manifest_url": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.13.4.0/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/283351455/9dd4cddc-8112-4f05-ba73-c3a321c804c6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A42%3A30Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A42%3A08Z&ske=2026-10-12T17%3A42%3A30Z&sks=b&skv=2018-11-09&sig=7OefJ0Zay2N%2FNpmO6TbcnLNq%2FVN08kQ4GfrRAuMtEBY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0MiwibmJmIjoxNzkxODIzNDQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gblHnVvCcO-2WuSUH2vTBMY0fYZ5PszeTKqjRUPZ6qA&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1530,
+        "sha256": "6a50508a42792b19ba9f0189ad44de7575081af5f6d0eae14c181a0775b4dc42"
+      },
+      "download_url": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.13.4.0/lib-wrapper-v1.13.4.0.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/283351455/33db3e7e-ba44-4cc5-8f4a-f5dc0a60efec?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A35%3A10Z&rscd=attachment%3B+filename%3Dlib-wrapper-v1.13.4.0.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A34%3A24Z&ske=2026-10-12T17%3A35%3A10Z&sks=b&skv=2018-11-09&sig=ow%2F6v0U6qLT5zryRBKZGpVGS%2FShZWMVhZzoxXEbeMfc%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1MCwibmJmIjoxNzkxODIzNDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1idCF10ys2Wkd6Izp6sr4dXHuEcveTBg3e-rWpG0918&response-content-disposition=attachment%3B%20filename%3Dlib-wrapper-v1.13.4.0.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 449355,
+        "sha256": "1fefede53d0f27f3c49732a3afd96ec3b1c3d8e6acc63efa49c738306b5c78cd",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "socketlib",
+      "expected_version": "v1.1.3",
+      "manifest_url": "https://github.com/farling42/foundryvtt-socketlib/releases/download/v1.1.3/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/357874680/edc24864-0ee1-4a46-b32f-8106acf1f1af?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A17%3A17Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A17%3A02Z&ske=2026-10-12T17%3A17%3A17Z&sks=b&skv=2018-11-09&sig=okFZcFdUWb2IatDgRLH9Oa%2FEhb506uGCw6uiw65eY3Y%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0MiwibmJmIjoxNzkxODIzNDQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.gblHnVvCcO-2WuSUH2vTBMY0fYZ5PszeTKqjRUPZ6qA&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1290,
+        "sha256": "7a8f5addd5b3eb6a4e5e61acf924ee5cea68895d85d5d1e585228403732e857c"
+      },
+      "download_url": "https://github.com/farling42/foundryvtt-socketlib/releases/download/v1.1.3/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/357874680/f697090e-200c-46c6-987d-759d7b41efad?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A34%3A48Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A34%3A30Z&ske=2026-10-12T17%3A34%3A48Z&sks=b&skv=2018-11-09&sig=czX9ba4c%2FzEwFScaPxbQfDUS32%2BBBy8c3Q4v8yOLiCY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1MCwibmJmIjoxNzkxODIzNDUwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.1idCF10ys2Wkd6Izp6sr4dXHuEcveTBg3e-rWpG0918&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 9006,
+        "sha256": "e62ce67da405218a89389e16f03f1d8b676f3bcec0eee621c3bea607af82f02e",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "wall-height",
+      "expected_version": "7.0.8",
+      "manifest_url": "https://github.com/theripper93/wall-height/releases/download/7.0.8/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/475402412/63db0e31-a60e-4914-9cb3-3afbbdb4d4f6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A34%3A48Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A33%3A58Z&ske=2026-10-12T17%3A34%3A48Z&sks=b&skv=2018-11-09&sig=uS2iq8QNQcfuHiApIx4h4Z70lJTXmiEuG6E5ie65%2F8M%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0MywibmJmIjoxNzkxODIzNDQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RfM9UMivybTCjsCKt6sfm99fdwQ00npSNtEZyN3yLfs&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1971,
+        "sha256": "d9ae800d44a5520fe0adf728b85478be82c029b046505bb28b190818c5143462"
+      },
+      "download_url": "https://github.com/theripper93/wall-height/releases/download/7.0.8/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/475402412/b0e2b798-b489-4181-a082-b995b927b619?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A34%3A25Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A33%3A58Z&ske=2026-10-12T17%3A34%3A25Z&sks=b&skv=2018-11-09&sig=GcqHsR%2BDcP%2Fj7V5Th5474U7cvJZpOjuuVAqGnhTMuA4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1MSwibmJmIjoxNzkxODIzNDUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.JcumXAVL452ZCHXNWdNhfliYyEz1dzpJEfmwLBdeMq4&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 31729,
+        "sha256": "6f9080fa5a00638a2ee6794bacd50e22febf8e56dc1ae377299c0be97940d915",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "levels",
+      "expected_version": "6.1.0",
+      "manifest_url": "https://github.com/theripper93/Levels/releases/download/6.1.0/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/373697769/4ef87322-8f90-4115-8ce7-e293c490eaf0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A34%3A57Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A34%3A21Z&ske=2026-10-12T17%3A34%3A57Z&sks=b&skv=2018-11-09&sig=6MUDf1jPrQqHF%2BBFdK6%2FTH6H0XzRklyzOqibenPGuys%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0MywibmJmIjoxNzkxODIzNDQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RfM9UMivybTCjsCKt6sfm99fdwQ00npSNtEZyN3yLfs&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 3105,
+        "sha256": "fd01155dc71d347c292b2f1ce98ec4ba666a78e55bf9297e94af7c05491ade07"
+      },
+      "download_url": "https://github.com/theripper93/Levels/releases/download/6.1.0/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/373697769/aaf9b13a-06d0-4d68-9ded-88d0104ed8fb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A43%3A26Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A42%3A52Z&ske=2026-10-12T17%3A43%3A26Z&sks=b&skv=2018-11-09&sig=WYCwg8kxqybqGPVWnsQt50V1zUfOAzv4tNHLdFJ6vpY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyNTI1MSwibmJmIjoxNzkxODIzNDUxLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Q3XOzI07YBElKf5rUZ3jGrL-JEsGDU4YZr8rbE7-bpk&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 17313250,
+        "sha256": "a4223bca717ee570362db1b88b148848ed5a8ffbe9f14a06054798e3ef6dc995",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "levels-3d-preview",
+      "expected_version": "8.0.14",
+      "manifest_url": "https://github.com/theripper93/levels-3d-preview/releases/download/8.0.14/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/411088711/06eb89d3-3c3f-4aae-8c1a-9379560bfed0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A20%3A02Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A20%3A02Z&ske=2026-10-12T17%3A20%3A02Z&sks=b&skv=2018-11-09&sig=ZoM%2BaTQ%2BjOOUH%2BbwQ4hnMZ64wbfCLF%2FRxMBmbDThbr4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc0MywibmJmIjoxNzkxODIzNDQzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RfM9UMivybTCjsCKt6sfm99fdwQ00npSNtEZyN3yLfs&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 2938,
+        "sha256": "26a7b10dbb8034a4482fcf8ca92aeb9922267e1e814283cd5675d34099d76cfc"
+      },
+      "download_url": "https://github.com/theripper93/levels-3d-preview/releases/download/8.0.14/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/411088711/64e62ff9-1dc9-495c-a853-0620bd1c6a06?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A18%3A07Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A17%3A19Z&ske=2026-10-12T17%3A18%3A07Z&sks=b&skv=2018-11-09&sig=%2BAUg3%2Bk84RakdIKbwVjwx3BdTBy0Ed5rt6KvPjFVDXs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyNTI1MiwibmJmIjoxNzkxODIzNDUyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.PtR43Pe7E-CadZC2LpJgHE6c-w7Wv90ITToCSs--YiY&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 11317000,
+        "sha256": "05fbf9c7923d308addb4da00daad1edc5a8fbb4739b4a12ca7b8ee7295f71d60",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "3d-to-iso",
+      "expected_version": "0.4.0",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/3d-to-iso.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/3d-to-iso.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1211,
+        "sha256": "45346d9400ad852a4c77dad1603498aab6180dac5e4ea701bb6b9ab7049b33ea"
+      },
+      "download_url": "https://github.com/Ludibrium-VTT/3d-to-iso/releases/download/0.4.0/3d-to-iso.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1119842464/d2478582-da22-4722-af15-e5e682218937?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A25%3A24Z&rscd=attachment%3B+filename%3D3d-to-iso.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A24%3A47Z&ske=2026-10-12T17%3A25%3A24Z&sks=b&skv=2018-11-09&sig=fS9bOYPtShg7KHgdOmniYjCcTwzauc9urbyZF6x7iCw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1MywibmJmIjoxNzkxODIzNDUzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.-bxtteAtQiKAB537v3SHGPpLCztBrzLSgNcwQgcOdZA&response-content-disposition=attachment%3B%20filename%3D3d-to-iso.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 498670,
+        "sha256": "1e6d40f06710a1bf21b36a04f61a50b42e6277ebfaa9c63ed0eb6f995ec499d9",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "5e-item-importer",
+      "expected_version": "13.9.1",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/5e-item-importer.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/5e-item-importer.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1337,
+        "sha256": "6d9995801d667651434a5511c4fd7584e3a339dc26ddc5208b5456c60fab4f9e"
+      },
+      "download_url": "https://github.com/GnollStack/5e-Item-Importer/releases/download/V13.9.1/5e-item-importer.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/1086876519/57b4add8-fb0f-4ed6-a4a7-7effe2be06b4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A32%3A02Z&rscd=attachment%3B+filename%3D5e-item-importer.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A32%3A00Z&ske=2026-10-12T17%3A32%3A02Z&sks=b&skv=2018-11-09&sig=P%2B5s71cHd2TH7d%2BaQ25u6ZK5Mq5b4ysGyht9elErmoQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1NCwibmJmIjoxNzkxODIzNDU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IhsCkCB2BSZroHdSss64rW1exgMLnAoPOQ2UjkmB2E0&response-content-disposition=attachment%3B%20filename%3D5e-item-importer.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 199073,
+        "sha256": "284a867bc4bcabb4fe1efc606733745ef8d36f9cbbd1bef9a81bc0d60b6175b0",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "dnd5e-spellpoints",
+      "expected_version": "3.2.40",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/dnd5e-spellpoints.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/dnd5e-spellpoints.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 2458,
+        "sha256": "378d3da21d34734c41042508299b8761e6d4efb2fea59fec3423467c5e70622e"
+      },
+      "download_url": "https://github.com/misthero/dnd5e-spellpoints/releases/download/v3.2.40/dnd5e-spellpoints.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/313466128/2b58c9ce-c29a-400a-ba18-e62860cbcb0e?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A34%3A54Z&rscd=attachment%3B+filename%3Ddnd5e-spellpoints.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A34%3A26Z&ske=2026-10-12T17%3A34%3A54Z&sks=b&skv=2018-11-09&sig=fiSiKUem8kh8x%2FWy9xBMEg0%2FwBuNgRYEANZ%2BeCkVp9s%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1NCwibmJmIjoxNzkxODIzNDU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.IhsCkCB2BSZroHdSss64rW1exgMLnAoPOQ2UjkmB2E0&response-content-disposition=attachment%3B%20filename%3Ddnd5e-spellpoints.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 522533,
+        "sha256": "a47b903bdaf44f252be7516201a0aa3468a46ade671542da5d3e212a0487301e",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "enhancedcombathud",
+      "expected_version": "4.1.2",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1310,
+        "sha256": "0af09b1e51a3360d9ebdbe261016f29c114679814aa18a2773d5e64864581eb6"
+      },
+      "download_url": "https://github.com/theripper93/enhancedcombathud/releases/download/4.1.2/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/387935730/de16c8d5-ba75-4005-a348-610deb7a924c?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A18%3A00Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A17%3A12Z&ske=2026-10-12T17%3A18%3A00Z&sks=b&skv=2018-11-09&sig=LjO5EveFp0auZvBUbVze6l400yj9RKzeqSTte3HINQo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1NSwibmJmIjoxNzkxODIzNDU1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.24NyOpjmlrtRpO9Io02zCKVYdFquEjzn6EaHQ6xQncQ&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 231895,
+        "sha256": "2f811b920f2fb732cd8373c9070f596ea3643d25096734e47f363eb2de534233",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "enhancedcombathud-dnd5e",
+      "expected_version": "5.1.5",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud-dnd5e.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud-dnd5e.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1276,
+        "sha256": "e40df563307b3907dfa94a4eca2512cfe0a6a8812035e99f2f21781f0b1fe2bc"
+      },
+      "download_url": "https://github.com/theripper93/enhancedcombathud-dnd5e/releases/download/5.1.5/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/724239049/26240308-86d6-44b6-b388-f649cd9676f9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A31%3A28Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A30%3A47Z&ske=2026-10-12T17%3A31%3A28Z&sks=b&skv=2018-11-09&sig=4nkQXYsOgdzkS2enGhhlEDDNKcvKISPyVHCrtqG46T8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1NSwibmJmIjoxNzkxODIzNDU1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.24NyOpjmlrtRpO9Io02zCKVYdFquEjzn6EaHQ6xQncQ&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 62131,
+        "sha256": "9c14f454bcaa30ecaacfabd736e8137bbd8271638d96777f290537aceded2cb2",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "isometric-perspective",
+      "expected_version": "0.9.7",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/isometric-perspective.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/isometric-perspective.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1369,
+        "sha256": "d3238c8bccb66b1521268cb5cc25d11c3eef6ae76f48b3ba80466ade6830b881"
+      },
+      "download_url": "https://github.com/arlosmolten/isometric-perspective/releases/download/v0.9.7/isometric-perspective.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/879338851/243de2b5-1517-4165-85b2-bd3f5ce1715d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A31%3A12Z&rscd=attachment%3B+filename%3Disometric-perspective.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A30%3A23Z&ske=2026-10-12T17%3A31%3A12Z&sks=b&skv=2018-11-09&sig=jFp7zL0Aj51Q66x57Bw38wrakuwLG2wEGn7ouQXpgJ0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1NiwibmJmIjoxNzkxODIzNDU2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.eHH2UFo_N9WBMRQ2y_JDKSVP2M8IP2OErErwegRXNfc&response-content-disposition=attachment%3B%20filename%3Disometric-perspective.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 503194,
+        "sha256": "76760934eea98332a9f60bd099db593147ea6ecb0b0334825399bb4aec233e35",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "multiple-document-selection",
+      "expected_version": "13.03",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/multiple-document-selection.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/multiple-document-selection.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1705,
+        "sha256": "ae1925788be2e333e37cc0394165daff368b15bbfec3641ff328c55bd017aa25"
+      },
+      "download_url": "https://github.com/ironmonk108/multiple-document-selection/archive/13.03.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://codeload.github.com/ironmonk108/multiple-document-selection/zip/refs/tags/13.03",
+        "content_type": "application/zip",
+        "bytes": 27437,
+        "sha256": "cf09a4ed4b505f05520e342872c2026a14d01561b9ce2c4d293527f27361d366",
+        "embedded_manifest": "multiple-document-selection-13.03/module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "WhisperBox",
+      "expected_version": "3.0.6",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/WhisperBox.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/WhisperBox.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 773,
+        "sha256": "33e45de10874b9fe0dc1b5758c64b948e39d86f4fa0ef046425c74a55178e390"
+      },
+      "download_url": "https://github.com/Sk1mble/WhisperBox/archive/refs/tags/v3.0.6.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://codeload.github.com/Sk1mble/WhisperBox/zip/refs/tags/v3.0.6",
+        "content_type": "application/zip",
+        "bytes": 4933,
+        "sha256": "c17ad84830afa196de6c02ee2f2fdaea8b2d20cfe0cdc68b2255c83d5ea39aaf",
+        "embedded_manifest": "WhisperBox-3.0.6/module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "plutonium",
+      "expected_version": "2.18.3.v13",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/plutonium.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/plutonium.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 2623,
+        "sha256": "c5794b35b85f0ff55f34843102845c7b362c6691503710623c295b401ff1eb22"
+      },
+      "download_url": "https://github.com/TheGiddyLimit/plutonium-next/releases/download/v2.18.3/plutonium-foundry13.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/373609872/403902f9-a011-442a-82dd-e34e6460621d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A44%3A43Z&rscd=attachment%3B+filename%3Dplutonium-foundry13.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A43%3A54Z&ske=2026-10-12T17%3A44%3A43Z&sks=b&skv=2018-11-09&sig=5L6cMmHrG%2BeKp%2FZe0FasI1McyeVV8S9y6PjUcCkzxDw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyNTI1NywibmJmIjoxNzkxODIzNDU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.LPpNqbRiPLz47N-8SvoeLGX9HAY_BSIMs7-CVRrWXLI&response-content-disposition=attachment%3B%20filename%3Dplutonium-foundry13.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 33215143,
+        "sha256": "36054d74063b06f453d37a7def5bd17721877a56f7a7ecad9641f41f0503ef05",
+        "embedded_manifest": "plutonium/module.json"
+      },
+      "archive_ok": true
+    },
+    {
+      "id": "soundscape",
+      "expected_version": "1.2.0",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/soundscape.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/soundscape.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1494,
+        "sha256": "55acb827a93a498a8f9737f30d6c4fb0763dc4628d6635b296926795500bff32"
+      },
+      "download_url": "https://github.com/CDeenen/Soundscape/releases/download/v1.2.0/module.zip",
+      "manifest_ok": true,
+      "archive_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/373625658/0734e879-5dc3-48ac-bc27-1659859867e2?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A37%3A38Z&rscd=attachment%3B+filename%3Dmodule.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A37%3A03Z&ske=2026-10-12T17%3A37%3A38Z&sks=b&skv=2018-11-09&sig=K1acDFqcF3w6J2LRte6pMs9%2FO1ej3T8vEkj082%2BMfW8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzc1OSwibmJmIjoxNzkxODIzNDU5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ._Wx5JCyUatludh5owSXKdnZgsRaa4RxTizBMS7nv1sk&response-content-disposition=attachment%3B%20filename%3Dmodule.zip&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 4463066,
+        "sha256": "8511d23e273bf8b12040bde2840e2dece29e48f79c49f31008fe0f45616950ed",
+        "embedded_manifest": "module.json"
+      },
+      "archive_ok": true
+    }
+  ],
+  "failed": [],
+  "total": 19,
+  "passed": 19,
+  "success": true
+}
