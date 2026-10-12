@@ -1,0 +1,282 @@
+{
+  "checked_utc": "2026-10-12T16:42:42.809684+00:00",
+  "meta_version": "1.2.2",
+  "archives_checked": false,
+  "modules": [
+    {
+      "id": "czepeku",
+      "expected_version": "1.0.0",
+      "manifest_url": "https://www.czepeku.com/fvtt-module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://dvw4irqpatydnndw.public.blob.vercel-storage.com/fvtt/latest/module.json",
+        "content_type": "application/json",
+        "bytes": 656,
+        "sha256": "41cbd04842a861b37947252f51c99c063827f8e29b555cdc9693396e16635b87"
+      },
+      "manifest_ok": false,
+      "archive_ok": null,
+      "error": "ValueError: version mismatch: expected '1.0.0'; got '1.1.0'"
+    },
+    {
+      "id": "cartorium-browser",
+      "expected_version": "1.0.8",
+      "manifest_url": "https://raw.githubusercontent.com/cartorium/Cartorium-assets/main/cartorium-browser/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/cartorium/Cartorium-assets/main/cartorium-browser/module.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 775,
+        "sha256": "bfc22009cb3ac393945993e9b1ce30d52ba0d2e079ee2be23801ed855725bcbb"
+      },
+      "download_url": "https://github.com/cartorium/Cartorium-assets/releases/download/cartorium-browser-v1.0.8/cartorium-browser.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "complete-card-management",
+      "expected_version": "2.1.2",
+      "manifest_url": "https://github.com/MetaMorphic-Digital/complete-card-management/releases/download/v2.1.2/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/807252296/9ff69dad-ba9e-4496-9bae-214cf7dca8cb?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A17%3A50Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A16%3A53Z&ske=2026-10-12T17%3A17%3A50Z&sks=b&skv=2018-11-09&sig=S1N1ml5jIODJ4WWiHh6HOrRty3m1WuFmRJWyyPtoT1A%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzY2MywibmJmIjoxNzkxODIzMzYzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ZawRBfBFydbruqNhqNYcADXUn7J5fc03YIeMNVPvnLU&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1909,
+        "sha256": "0be88729587d26f96d90f4bc0a58e673ccc0c215a45f111db6b59850990e06d7"
+      },
+      "download_url": "https://github.com/MetaMorphic-Digital/complete-card-management/releases/download/v2.1.2/module.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "card-hands-list",
+      "expected_version": "2.2.7",
+      "manifest_url": "https://github.com/kristianserrano/card-hands-list/releases/download/2.2.7/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/646518515/f8350d79-6800-4b72-8c6f-307db53f03d5?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A34%3A59Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A34%3A34Z&ske=2026-10-12T17%3A34%3A59Z&sks=b&skv=2018-11-09&sig=U0mlGJrO%2BRHSZlpDHqzGohuxFBakWC0uuBjl00wFkw4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzY2NCwibmJmIjoxNzkxODIzMzY0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VhC6_EnpRJMtuIHEjA7EKqg0Y_FvAf3AN_aTMDImnJ8&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 2192,
+        "sha256": "e9de267e5db5d39cd59d5d908569baad2bc17ca0d13a3ea97c65484747d0cea6"
+      },
+      "download_url": "https://github.com/kristianserrano/card-hands-list/releases/download/2.2.7/module.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "lib-wrapper",
+      "expected_version": "1.13.4.0",
+      "manifest_url": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.13.4.0/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/283351455/9dd4cddc-8112-4f05-ba73-c3a321c804c6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A33%3A15Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A32%3A58Z&ske=2026-10-12T17%3A33%3A15Z&sks=b&skv=2018-11-09&sig=usXSpqcBpMqTEjSoZOaUHbxmHjvKZ8G1hN588NeQQEQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzY2NCwibmJmIjoxNzkxODIzMzY0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VhC6_EnpRJMtuIHEjA7EKqg0Y_FvAf3AN_aTMDImnJ8&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1530,
+        "sha256": "6a50508a42792b19ba9f0189ad44de7575081af5f6d0eae14c181a0775b4dc42"
+      },
+      "download_url": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.13.4.0/lib-wrapper-v1.13.4.0.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "socketlib",
+      "expected_version": "1.1.3",
+      "manifest_url": "https://github.com/farling42/foundryvtt-socketlib/releases/download/v1.1.3/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/357874680/edc24864-0ee1-4a46-b32f-8106acf1f1af?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A25%3A06Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A24%3A46Z&ske=2026-10-12T17%3A25%3A06Z&sks=b&skv=2018-11-09&sig=6OFRhAihzM86nntBzpW0LO9tEGM3U%2BqTwxFA93HE8vw%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzY2NCwibmJmIjoxNzkxODIzMzY0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.VhC6_EnpRJMtuIHEjA7EKqg0Y_FvAf3AN_aTMDImnJ8&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1290,
+        "sha256": "7a8f5addd5b3eb6a4e5e61acf924ee5cea68895d85d5d1e585228403732e857c"
+      },
+      "manifest_ok": false,
+      "archive_ok": null,
+      "error": "ValueError: version mismatch: expected '1.1.3'; got 'v1.1.3'"
+    },
+    {
+      "id": "wall-height",
+      "expected_version": "7.0.8",
+      "manifest_url": "https://github.com/theripper93/wall-height/releases/download/7.0.8/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/475402412/63db0e31-a60e-4914-9cb3-3afbbdb4d4f6?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A40%3A24Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A40%3A20Z&ske=2026-10-12T17%3A40%3A24Z&sks=b&skv=2018-11-09&sig=xgGZhZ%2BukfO1pXbdgSk7eIb9InyCxBJ0W5f6iE7s5r0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzY2NSwibmJmIjoxNzkxODIzMzY1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Rl3SBEyQA9rAEKrXsJf36M5s34n1YBBqRBu_217Q40g&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 1971,
+        "sha256": "d9ae800d44a5520fe0adf728b85478be82c029b046505bb28b190818c5143462"
+      },
+      "download_url": "https://github.com/theripper93/wall-height/releases/download/7.0.8/module.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "levels",
+      "expected_version": "6.1.0",
+      "manifest_url": "https://github.com/theripper93/Levels/releases/download/6.1.0/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/373697769/4ef87322-8f90-4115-8ce7-e293c490eaf0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A31%3A14Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A31%3A03Z&ske=2026-10-12T17%3A31%3A14Z&sks=b&skv=2018-11-09&sig=9jxItpwZX7AEexyu%2B2cjSpdESOUh1xzQfj1tTLzMziQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzY2NSwibmJmIjoxNzkxODIzMzY1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Rl3SBEyQA9rAEKrXsJf36M5s34n1YBBqRBu_217Q40g&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 3105,
+        "sha256": "fd01155dc71d347c292b2f1ce98ec4ba666a78e55bf9297e94af7c05491ade07"
+      },
+      "download_url": "https://github.com/theripper93/Levels/releases/download/6.1.0/module.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "levels-3d-preview",
+      "expected_version": "8.0.14",
+      "manifest_url": "https://github.com/theripper93/levels-3d-preview/releases/download/8.0.14/module.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/411088711/06eb89d3-3c3f-4aae-8c1a-9379560bfed0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-12T17%3A34%3A32Z&rscd=attachment%3B+filename%3Dmodule.json&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-12T16%3A34%3A18Z&ske=2026-10-12T17%3A34%3A32Z&sks=b&skv=2018-11-09&sig=Dh45eLXltTMqCmPvTc7HeQndQlKUF8nES18QDnHNC98%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTgyMzY2NSwibmJmIjoxNzkxODIzMzY1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.Rl3SBEyQA9rAEKrXsJf36M5s34n1YBBqRBu_217Q40g&response-content-disposition=attachment%3B%20filename%3Dmodule.json&response-content-type=application%2Foctet-stream",
+        "content_type": "application/octet-stream",
+        "bytes": 2938,
+        "sha256": "26a7b10dbb8034a4482fcf8ca92aeb9922267e1e814283cd5675d34099d76cfc"
+      },
+      "download_url": "https://github.com/theripper93/levels-3d-preview/releases/download/8.0.14/module.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "3d-to-iso",
+      "expected_version": "0.4.0",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/3d-to-iso.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/3d-to-iso.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1211,
+        "sha256": "45346d9400ad852a4c77dad1603498aab6180dac5e4ea701bb6b9ab7049b33ea"
+      },
+      "download_url": "https://github.com/Ludibrium-VTT/3d-to-iso/releases/download/0.4.0/3d-to-iso.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "5e-item-importer",
+      "expected_version": "13.9.1",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/5e-item-importer.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/5e-item-importer.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1337,
+        "sha256": "6d9995801d667651434a5511c4fd7584e3a339dc26ddc5208b5456c60fab4f9e"
+      },
+      "download_url": "https://github.com/GnollStack/5e-Item-Importer/releases/download/V13.9.1/5e-item-importer.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "dnd5e-spellpoints",
+      "expected_version": "3.2.40",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/dnd5e-spellpoints.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/dnd5e-spellpoints.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 2458,
+        "sha256": "378d3da21d34734c41042508299b8761e6d4efb2fea59fec3423467c5e70622e"
+      },
+      "download_url": "https://github.com/misthero/dnd5e-spellpoints/releases/download/v3.2.40/dnd5e-spellpoints.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "enhancedcombathud",
+      "expected_version": "4.1.2",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1310,
+        "sha256": "0af09b1e51a3360d9ebdbe261016f29c114679814aa18a2773d5e64864581eb6"
+      },
+      "download_url": "https://github.com/theripper93/enhancedcombathud/releases/download/4.1.2/module.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "enhancedcombathud-dnd5e",
+      "expected_version": "5.1.5",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud-dnd5e.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/enhancedcombathud-dnd5e.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1276,
+        "sha256": "e40df563307b3907dfa94a4eca2512cfe0a6a8812035e99f2f21781f0b1fe2bc"
+      },
+      "download_url": "https://github.com/theripper93/enhancedcombathud-dnd5e/releases/download/5.1.5/module.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "isometric-perspective",
+      "expected_version": "0.9.7",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/isometric-perspective.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/isometric-perspective.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1369,
+        "sha256": "d3238c8bccb66b1521268cb5cc25d11c3eef6ae76f48b3ba80466ade6830b881"
+      },
+      "download_url": "https://github.com/arlosmolten/isometric-perspective/releases/download/v0.9.7/isometric-perspective.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "multiple-document-selection",
+      "expected_version": "13.03",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/multiple-document-selection.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/multiple-document-selection.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1705,
+        "sha256": "ae1925788be2e333e37cc0394165daff368b15bbfec3641ff328c55bd017aa25"
+      },
+      "download_url": "https://github.com/ironmonk108/multiple-document-selection/archive/13.03.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "WhisperBox",
+      "expected_version": "3.0.6",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/WhisperBox.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/WhisperBox.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 773,
+        "sha256": "33e45de10874b9fe0dc1b5758c64b948e39d86f4fa0ef046425c74a55178e390"
+      },
+      "download_url": "https://github.com/Sk1mble/WhisperBox/archive/refs/tags/v3.0.6.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "plutonium",
+      "expected_version": "2.18.3.v13",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/plutonium.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/plutonium.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 2623,
+        "sha256": "c5794b35b85f0ff55f34843102845c7b362c6691503710623c295b401ff1eb22"
+      },
+      "download_url": "https://github.com/TheGiddyLimit/plutonium-next/releases/download/v2.18.3/plutonium-foundry13.zip",
+      "manifest_ok": true
+    },
+    {
+      "id": "soundscape",
+      "expected_version": "1.2.0",
+      "manifest_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/soundscape.json",
+      "manifest_http": {
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/Quarky/V13dependencies/main/pinned-manifests/soundscape.json",
+        "content_type": "text/plain; charset=utf-8",
+        "bytes": 1494,
+        "sha256": "55acb827a93a498a8f9737f30d6c4fb0763dc4628d6635b296926795500bff32"
+      },
+      "download_url": "https://github.com/CDeenen/Soundscape/releases/download/v1.2.0/module.zip",
+      "manifest_ok": true
+    }
+  ],
+  "failed": [
+    "czepeku",
+    "socketlib"
+  ],
+  "total": 19,
+  "passed": 17,
+  "success": false
+}
