@@ -36,7 +36,7 @@ jobs:
           assert manifest["compatibility"]["maximum"]=="13"
           registry=json.load(open("dependencies-v13.json"))
           automatic={entry["id"]:entry for entry in registry["packages"] if entry.get("installMode")=="manifest"}
-          assert not manifest["relationships"]["requires"], "External modules must not block meta-module installation"
+          assert set(automatic)==set(dep["id"] for dep in manifest["relationships"]["requires"])
           for ident, entry in automatic.items():
               assert entry["manifest"].startswith("https://")
               if "/pinned-manifests/" in entry["manifest"]:
@@ -48,6 +48,49 @@ jobs:
                   assert data["download"].startswith("https://"),ident
                   assert "/latest/" not in data["download"],ident
           assert not any(x["id"] in automatic for x in registry["packages"] if x.get("installMode")!="manifest")
+          PY
+      - name: Verify all mandatory manifests over HTTPS (reject HTML, 403, 404, mismatches)
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, urllib.error
+          from urllib.parse import urlparse
+          m=json.load(open("module.json"))
+          reg=json.load(open("dependencies-v13.json"))
+          expected={x["id"]:x for x in reg["packages"] if x.get("installMode")=="manifest"}
+          errors=[]
+          for dep in m["relationships"]["requires"]:
+              ident=dep["id"]
+              url=dep["manifest"]
+              try:
+                  if not url.startswith("https://") or "/blob/" in url:
+                      raise ValueError("not a direct HTTPS manifest URL")
+                  req=urllib.request.Request(url,headers={"User-Agent":"FoundryV13ManifestVerifier/1.0","Accept":"application/json"})
+                  with urllib.request.urlopen(req,timeout=25) as response:
+                      final=response.geturl()
+                      payload=response.read(2_000_001)
+                      if len(payload)>2_000_000: raise ValueError("manifest too large")
+                      if not final.startswith("https://"): raise ValueError("redirected away from HTTPS")
+                  if payload.lstrip().startswith((b"<",b"<!DOCTYPE")):
+                      raise ValueError("HTML response, not JSON")
+                  data=json.loads(payload.decode("utf-8-sig"))
+                  if not isinstance(data,dict): raise ValueError("not a JSON object")
+                  if data.get("id")!=ident: raise ValueError(f"ID mismatch {data.get('id')!r}")
+                  if str(data.get("version"))!=str(expected[ident]["expectedVersion"]):
+                      raise ValueError(f"version mismatch {data.get('version')!r} != {expected[ident]['expectedVersion']!r}")
+                  compat=data.get("compatibility",{})
+                  minimum=str(compat.get("minimum","0"))
+                  maximum=str(compat.get("maximum","999"))
+                  if int(minimum.split(".")[0])>13 or int(maximum.split(".")[0])<13:
+                      raise ValueError(f"not V13-compatible: {compat!r}")
+                  download=data.get("download","")
+                  if not isinstance(download,str) or not download.startswith("https://") or "/blob/" in download:
+                      raise ValueError("invalid HTTPS archive URL")
+                  print(f"OK {ident} {data['version']} {url}")
+              except Exception as exc:
+                  errors.append(f"{ident}: {url}: {type(exc).__name__}: {exc}")
+          if errors:
+              print("\\n".join(errors))
+              raise SystemExit(f"FAILED: {len(errors)} mandatory manifests invalid; refusing to publish ZIP")
           PY
       - name: Build installable Foundry V13 module archive
         run: |
