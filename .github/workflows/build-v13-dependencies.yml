@@ -102,6 +102,7 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          import json
           import zipfile
           names = ['module.json','dependencies-v13.json','dependency_manager.py','install.sh','Install.command','export_modules.py','Export-Module-Inventory.command','README.md'] + [str(p) for p in sorted(Path('pinned-manifests').glob('*.json'))]
           with zipfile.ZipFile('v13dependencies.zip','w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
