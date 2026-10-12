@@ -11,15 +11,15 @@
       "id": "czepeku",
       "name": "CZEPEKU Universe",
       "v14Version": "1.0.0",
-      "v13Version": "1.0.0",
+      "v13Version": "1.1.0",
       "role": "optional-map-source",
       "installMode": "manifest",
       "manifest": "https://www.czepeku.com/fvtt-module.json",
-      "expectedVersion": "1.0.0",
+      "expectedVersion": "1.1.0",
       "foundryMinimum": "12",
       "foundryMaximum": "14",
       "verifiedFoundry": 14,
-      "notes": "Foundry 12-14. Requires active Czepeku website subscription; publisher-hosted manifest version checked."
+      "notes": "Live publisher manifest returned JSON v1.1.0 on 2026-10-12; Foundry registry still lists 1.0.0. Await V13 compatibility and archive audit."
     },
     {
       "id": "cartorium-browser",
@@ -80,14 +80,14 @@
       "id": "socketlib",
       "name": "socketlib",
       "v14Version": "1.1.4",
-      "v13Version": "1.1.3",
+      "v13Version": "v1.1.3",
       "role": "3d-canvas-companion-library",
       "installMode": "manifest",
       "manifest": "https://github.com/farling42/foundryvtt-socketlib/releases/download/v1.1.3/module.json",
-      "expectedVersion": "1.1.3",
+      "expectedVersion": "v1.1.3",
       "foundryMinimum": "11",
       "verifiedFoundry": 13,
-      "notes": "V13-verified stable library; listed in the 3D Canvas documentation's prerequisite stack."
+      "notes": "Actual publisher release manifest reports version string v1.1.3 (with prefix). Foundry registry labels release 1.1.3 and verifies V13; use exact manifest version."
     },
     {
       "id": "wall-height",
